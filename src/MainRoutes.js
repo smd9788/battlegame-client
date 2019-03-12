@@ -9,6 +9,7 @@ import SignOut from './auth/components/SignOut'
 import ChangePassword from './auth/components/ChangePassword'
 import Home from './gameboard/scene/components/Home.js'
 import CreateCharacter from './gameboard/characters/components/CreateCharacter.js'
+import Characters from './gameboard/characters/components/Characters.js'
 
 class MainRoutes extends Component {
   constructor () {
@@ -47,6 +48,9 @@ class MainRoutes extends Component {
         )} />
         <AuthenticatedRoute user={user} path='/change-password' render={() => (
           <ChangePassword alert={this.alert} user={user} />
+        )} />
+        <AuthenticatedRoute user={user} path='/characters' render={() => (
+          <Characters alert={this.alert} user={user} />
         )} />
         <AuthenticatedRoute user={user} path='/create-character' render={() => (
           <CreateCharacter alert={this.alert} user={user} />
