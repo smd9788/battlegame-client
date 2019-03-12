@@ -7,6 +7,10 @@ $charcoal: #ccc;
   font-family: 'Bungee', cursive;
 }
 
+body {
+  background-color: #333333;
+}
+
 .flash-success,
 .flash-warning,
 .flash-error {
@@ -35,7 +39,7 @@ $charcoal: #ccc;
 
 .game-canvas {
   background-color: #4bc653;
-  border: 2px solid blue;
+  border: 2px solid;
   height: 75vh;
   margin-left: auto;
   margin-right: auto;

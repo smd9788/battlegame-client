@@ -2,26 +2,29 @@ $charcoal: #bbb;
 
 .main-header {
   align-items: center;
+  background-color: black;
   border-bottom: 1px solid $charcoal;
   display: flex;
-  height: 100px;
+  height: 10vh;
   padding: 0 20px;
 
   .header-logo {
+    color: #4bc653;
     font-family: 'Black Ops One', cursive;
-    font-size: 2.5em;
+    font-size: 3em;
     margin: 0 15px;
+    padding: 1vh;
   }
   span {
     flex-direction: column;
     flex-grow: 1;
-    font-family: 'Black Ops One', cursive;
     font-size: 2em;
     margin: 0 15px;
     text-align: right;
 
     a {
-      color: black;
+      color: #4bc653;
+      font-family: 'Black Ops One', cursive;
       text-decoration: none;
     }
   }
