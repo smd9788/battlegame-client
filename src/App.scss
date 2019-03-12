@@ -29,6 +29,19 @@ $charcoal: #ccc;
   background-color: $error;
 }
 
+.game-canvas {
+  background-color: #4bc653;
+  border: 2px solid blue;
+  font-family: 'Bungee', cursive;
+  height: 75vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2vh;
+  padding-left: 0;
+  padding-right: 0;
+  width: auto;
+}
+
 .auth-form {
   display: flex;
   flex-direction: column;
