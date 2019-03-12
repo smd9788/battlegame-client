@@ -34,7 +34,7 @@ const Home = ({ user }) => (
   <Fragment>
     <div className="homescreen-menu">
       { user && <span className="welcome-message">Welcome, {user.email}</span>}
-      <h1 className="homescreen-title">BattleGame</h1>
+      <h1 className="homescreen-title">HeroBuilder</h1>
       <div>
         { user ? authenticatedOptions : unauthenticatedOptions }
       </div>

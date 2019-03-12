@@ -3,6 +3,10 @@ $warning: #f1e681;
 $error: #f08181;
 $charcoal: #ccc;
 
+* {
+  font-family: 'Bungee', cursive;
+}
+
 .flash-success,
 .flash-warning,
 .flash-error {
@@ -32,7 +36,6 @@ $charcoal: #ccc;
 .game-canvas {
   background-color: #4bc653;
   border: 2px solid blue;
-  font-family: 'Bungee', cursive;
   height: 75vh;
   margin-left: auto;
   margin-right: auto;
