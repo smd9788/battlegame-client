@@ -9,6 +9,8 @@ import SignIn from './auth/components/SignIn'
 import SignOut from './auth/components/SignOut'
 import ChangePassword from './auth/components/ChangePassword'
 
+import Gameboard from './gameboard/scene/components/Gameboard.js'
+
 import Alert from 'react-bootstrap/Alert'
 
 class App extends Component {
@@ -56,6 +58,7 @@ class App extends Component {
             <ChangePassword alert={this.alert} user={user} />
           )} />
         </main>
+        <Gameboard />
       </React.Fragment>
     )
   }
