@@ -12,6 +12,7 @@ import Home from './herobuilder/scene/components/Home.js'
 import CreateCharacter from './herobuilder/characters/components/CreateCharacter.js'
 import Characters from './herobuilder/characters/components/Characters.js'
 import Character from './herobuilder/characters/components/Character.js'
+import UpdateCharacter from './herobuilder/characters/components/UpdateCharacter.js'
 
 class MainRoutes extends Component {
   constructor () {
@@ -57,10 +58,13 @@ class MainRoutes extends Component {
         <AuthenticatedRoute user={user} exact path='/characters' render={() => (
           <Characters alert={this.alert} user={user} />
         )} />
-        <AuthenticatedRoute user={user} path='/characters/:id' render={() => (
+        <AuthenticatedRoute user={user} exact path='/characters/:id' render={() => (
           <Character alert={this.alert} user={user} setCharacterId={this.setCharacterId} />
         )} />
-        <AuthenticatedRoute user={user} path='/create-character' render={() => (
+        <AuthenticatedRoute user={user} exact path='/characters/:id/update' render={() => (
+          <UpdateCharacter alert={this.alert} user={user} setCharacterId={this.setCharacterId} />
+        )} />
+        <AuthenticatedRoute user={user} exact path='/create-character' render={() => (
           <CreateCharacter alert={this.alert} user={user} />
         )} />
       </React.Fragment>

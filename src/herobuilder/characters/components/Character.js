@@ -66,7 +66,7 @@ class Character extends Component {
         <p>Class: {charClass}</p>
         <p>Level {level}</p>
         <button className='delete-button' onClick={() => this.deleteCharacter(id)}>Delete</button>
-        <Link to={`/characters/${this.props.id}/update`}>
+        <Link to={`/characters/${this.props.match.params.id}/update`}>
           <button>Update</button>
         </Link>
       </article>
