@@ -15,20 +15,20 @@ class Character extends Component {
     }
   }
 
-  // deleteCharacter = (id) => {
-  //   axios({
-  //     url: apiUrl + '/characters/' + this.props.id,
-  //     method: 'delete',
-  //     headers: {
-  //       'Authorization': `Token token=${this.props.user.token}`
-  //     }
-  //   })
-  //     .then(() => this.setState({
-  //       shouldRedirect: true,
-  //       redirectMessage: 'Successfully deleted character.'
-  //     }))
-  //     .catch(() => this.setState({ shouldRedirect: true }))
-  // }
+  deleteCharacter = (id) => {
+    axios({
+      url: apiUrl + '/characters/' + this.props.match.params.id,
+      method: 'delete',
+      headers: {
+        'Authorization': `Token token=${this.props.user.token}`
+      }
+    })
+      .then(() => this.setState({
+        shouldRedirect: true,
+        redirectMessage: 'Successfully deleted character.'
+      }))
+      .catch(() => this.setState({ shouldRedirect: true }))
+  }
 
   componentDidMount () {
     axios({
