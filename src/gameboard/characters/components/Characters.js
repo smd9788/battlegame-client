@@ -13,7 +13,7 @@ class Characters extends Component {
     }
   }
 
-  componentDidMount () {
+  componentWillMount () {
     axios({
       url: apiUrl + '/characters',
       method: 'get',
@@ -21,7 +21,7 @@ class Characters extends Component {
         'Authorization': `Token token=${this.props.user.token}`
       }
     })
-      .then(console.log(response => this.setState({ characters: response.data.characters })))
+      .then(response => this.setState({ characters: response.data.characters }))
       .catch(console.error)
   }
 
@@ -33,6 +33,7 @@ class Characters extends Component {
           {this.state.characters.map(character => (
             <li key={character.id} className='character-list-item'>
               <Link to={`/characters/${character.id}`}>{character.nickname}</Link>
+              <p>{character.charClass}</p>
             </li>
           ))}
         </ul>
