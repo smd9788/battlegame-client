@@ -58,12 +58,13 @@ class Character extends Component {
       return <p>loading...</p>
     }
 
-    const { nickname, charClass, id } = character
+    const { nickname, charClass, level, id } = character
 
     return (
       <article>
         <h4>{nickname}</h4>
         <p>Class: {charClass}</p>
+        <p>Level {level}</p>
         <button className='delete-button' onClick={() => this.deleteCharacter(id)}>Delete</button>
         <Link to={`/characters/${this.props.id}/update`}>
           <button>Update</button>

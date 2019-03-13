@@ -34,7 +34,7 @@ class Characters extends Component {
             <li key={character._id} id={character._id} className='character-list-item'>
               <Link to={`/characters/${character._id}`}>{character.nickname}</Link>
               <p>{character.charClass}</p>
-              <p>{character._id}</p>
+              <p>Level {character.level}</p>
             </li>
           ))}
         </ul>
