@@ -8,10 +8,10 @@ import SignUp from './auth/components/SignUp'
 import SignIn from './auth/components/SignIn'
 import SignOut from './auth/components/SignOut'
 import ChangePassword from './auth/components/ChangePassword'
-import Home from './gameboard/scene/components/Home.js'
-import CreateCharacter from './gameboard/characters/components/CreateCharacter.js'
-import Characters from './gameboard/characters/components/Characters.js'
-import Character from './gameboard/characters/components/Character.js'
+import Home from './herobuilder/scene/components/Home.js'
+import CreateCharacter from './herobuilder/characters/components/CreateCharacter.js'
+import Characters from './herobuilder/characters/components/Characters.js'
+import Character from './herobuilder/characters/components/Character.js'
 
 class MainRoutes extends Component {
   constructor () {
