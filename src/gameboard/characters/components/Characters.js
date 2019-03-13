@@ -31,9 +31,10 @@ class Characters extends Component {
         <h3 className='title-header'>Your Heros:</h3>
         <ul className='character-list-container'>
           {this.state.characters.map(character => (
-            <li key={character.id} className='character-list-item'>
-              <Link to={`/characters/${character.id}`}>{character.nickname}</Link>
+            <li key={character._id} id={character._id} className='character-list-item'>
+              <Link to={`/characters/${character._id}`}>{character.nickname}</Link>
               <p>{character.charClass}</p>
+              <p>{character._id}</p>
             </li>
           ))}
         </ul>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './App.scss'
 import { Route } from 'react-router-dom'
+import { withRouter } from 'react-router'
 
 import AuthenticatedRoute from './auth/components/AuthenticatedRoute'
 import SignUp from './auth/components/SignUp'
@@ -10,6 +11,7 @@ import ChangePassword from './auth/components/ChangePassword'
 import Home from './gameboard/scene/components/Home.js'
 import CreateCharacter from './gameboard/characters/components/CreateCharacter.js'
 import Characters from './gameboard/characters/components/Characters.js'
+import Character from './gameboard/characters/components/Character.js'
 
 class MainRoutes extends Component {
   constructor () {
@@ -17,11 +19,14 @@ class MainRoutes extends Component {
 
     this.state = {
       user: null,
-      alerts: []
+      alerts: [],
+      id: null
     }
   }
 
   setUser = user => this.setState({ user })
+
+  setCharacterId = id => this.setState({ id })
 
   clearUser = () => this.setState({ user: null })
 
@@ -49,8 +54,11 @@ class MainRoutes extends Component {
         <AuthenticatedRoute user={user} path='/change-password' render={() => (
           <ChangePassword alert={this.alert} user={user} />
         )} />
-        <AuthenticatedRoute user={user} path='/characters' render={() => (
+        <AuthenticatedRoute user={user} exact path='/characters' render={() => (
           <Characters alert={this.alert} user={user} />
+        )} />
+        <AuthenticatedRoute user={user} path='/characters/:id' render={() => (
+          <Character alert={this.alert} user={user} setCharacterId={this.setCharacterId} />
         )} />
         <AuthenticatedRoute user={user} path='/create-character' render={() => (
           <CreateCharacter alert={this.alert} user={user} />
@@ -60,4 +68,4 @@ class MainRoutes extends Component {
   }
 }
 
-export default MainRoutes
+export default withRouter(MainRoutes)

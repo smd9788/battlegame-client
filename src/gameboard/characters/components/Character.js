@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import { Redirect } from 'react-router'
+import { Redirect, withRouter } from 'react-router'
 import { Link } from 'react-router-dom'
-
-import apiUrl from '../../apiConfig'
+import apiUrl from '../../../apiConfig'
 
 class Character extends Component {
   constructor () {
@@ -16,22 +15,28 @@ class Character extends Component {
     }
   }
 
-  deleteCharacter = (id) => {
-    axios({
-      url: apiUrl + '/characters/' + this.props.match.params.id,
-      method: 'delete'
-    })
-      .then(() => this.setState({
-        shouldRedirect: true,
-        redirectMessage: 'Successfully deleted character.'
-      }))
-      .catch(() => this.setState({ shouldRedirect: true }))
-  }
+  // deleteCharacter = (id) => {
+  //   axios({
+  //     url: apiUrl + '/characters/' + this.props.id,
+  //     method: 'delete',
+  //     headers: {
+  //       'Authorization': `Token token=${this.props.user.token}`
+  //     }
+  //   })
+  //     .then(() => this.setState({
+  //       shouldRedirect: true,
+  //       redirectMessage: 'Successfully deleted character.'
+  //     }))
+  //     .catch(() => this.setState({ shouldRedirect: true }))
+  // }
 
   componentDidMount () {
     axios({
       url: apiUrl + '/characters/' + this.props.match.params.id,
-      method: 'get'
+      method: 'get',
+      headers: {
+        'Authorization': `Token token=${this.props.user.token}`
+      }
     })
       .then(response => this.setState({ character: response.data.character }))
       .catch(() => this.setState({
@@ -53,14 +58,14 @@ class Character extends Component {
       return <p>loading...</p>
     }
 
-    const { nickname, level, charclass, id } = character
+    const { nickname, charClass, id } = character
+
     return (
       <article>
         <h4>{nickname}</h4>
-        <p>Level: {level}</p>
-        <p>Class: {charclass}</p>
+        <p>Class: {charClass}</p>
         <button className='delete-button' onClick={() => this.deleteCharacter(id)}>Delete</button>
-        <Link to={`/characters/${this.props.match.params.id}/update`}>
+        <Link to={`/characters/${this.props.id}/update`}>
           <button>Update</button>
         </Link>
       </article>
@@ -68,4 +73,4 @@ class Character extends Component {
   }
 }
 
-export default Character
+export default withRouter(Character)
