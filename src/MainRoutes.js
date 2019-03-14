@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import './App.scss'
 import { Route } from 'react-router-dom'
 import { withRouter } from 'react-router'
-import Alert from 'react-bootstrap/Alert'
 
 import AuthenticatedRoute from './auth/components/AuthenticatedRoute'
 import SignUp from './auth/components/SignUp'
@@ -32,12 +31,9 @@ class MainRoutes extends Component {
 
   clearUser = () => this.setState({ user: null })
 
-  alert = (message, type) => {
-    this.setState({ alerts: [...this.state.alerts, { message, type }] })
-  }
-
   render () {
-    const { user, alerts } = this.state
+    const { user } = this.state
+    const { alert } = this.props
 
     return (
       <React.Fragment>
@@ -45,36 +41,29 @@ class MainRoutes extends Component {
           <Home user={user} />
         )} />
         <Route path='/sign-up' render={() => (
-          <SignUp alert={this.alert} setUser={this.setUser} />
+          <SignUp alert={alert} setUser={this.setUser} />
         )} />
         <Route path='/sign-in' render={() => (
-          <SignIn alert={this.alert} setUser={this.setUser} />
+          <SignIn alert={alert} setUser={this.setUser} />
         )} />
         <AuthenticatedRoute user={user} path='/sign-out' render={() => (
-          <SignOut alert={this.alert} clearUser={this.clearUser} user={user} />
+          <SignOut alert={alert} clearUser={this.clearUser} user={user} />
         )} />
         <AuthenticatedRoute user={user} path='/change-password' render={() => (
-          <ChangePassword alert={this.alert} user={user} />
+          <ChangePassword alert={alert} user={user} />
         )} />
         <AuthenticatedRoute user={user} exact path='/characters' render={() => (
-          <Characters alert={this.alert} user={user} />
+          <Characters alert={alert} user={user} />
         )} />
         <AuthenticatedRoute user={user} exact path='/characters/:id' render={() => (
-          <Character alert={this.alert} user={user} setCharacterId={this.setCharacterId} />
+          <Character alert={alert} user={user} setCharacterId={this.setCharacterId} />
         )} />
         <AuthenticatedRoute user={user} exact path='/characters/:id/update' render={() => (
-          <UpdateCharacter alert={this.alert} user={user} setCharacterId={this.setCharacterId} />
+          <UpdateCharacter alert={alert} user={user} setCharacterId={this.setCharacterId} />
         )} />
         <AuthenticatedRoute user={user} exact path='/create-character' render={() => (
-          <CreateCharacter alert={this.alert} user={user} />
+          <CreateCharacter alert={alert} user={user} />
         )} />
-        {alerts.map((alert, index) => (
-          <Alert key={index} dismissible variant={alert.type}>
-            <Alert.Heading>
-              {alert.message}
-            </Alert.Heading>
-          </Alert>
-        ))}
       </React.Fragment>
     )
   }

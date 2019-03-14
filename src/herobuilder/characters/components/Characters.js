@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import '../characters.scss'
 
 import apiUrl from '../../../apiConfig'
 
@@ -29,7 +30,7 @@ class Characters extends Component {
     return (
       <Fragment>
         <h3 className='title-header'>Your Heros:</h3>
-        <ul className='character-list-container'>
+        <div className='character-list-container'>
           {this.state.characters.map(character => (
             <li key={character._id} id={character._id} className='character-list-item'>
               <Link to={`/characters/${character._id}`}>
@@ -39,7 +40,7 @@ class Characters extends Component {
               <p>Level {character.level}</p>
             </li>
           ))}
-        </ul>
+        </div>
         <Link to="/">
           <button className='mainmenu-ui-button'>Main Menu</button>
         </Link>
