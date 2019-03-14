@@ -63,7 +63,6 @@ class UpdateCharacter extends Component {
 
   handleSelect = (eventKey, event) => {
     event.persist()
-    console.log(event)
     const editedClass = this.state.character
     editedClass.charClass = eventKey
     this.setState({ character: editedClass })

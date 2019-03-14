@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Dropdown from 'react-bootstrap/Dropdown'
 import DropdownButton from 'react-bootstrap/DropdownButton'
 
@@ -17,6 +18,12 @@ const CharacterForm = ({ handleSelect, handleChange, handleSubmit, character }) 
     <p>{character.charClass}</p>
     <p>Level {character.level}</p>
     <button type="submit">Submit</button>
+    <Link to="/">
+      <button className='mainmenu-ui-button'>Main Menu</button>
+    </Link>
+    <Link to="/characters">
+      <button className="ui-button" type="submit">Your Heros</button>
+    </Link>
   </form>
 )
 

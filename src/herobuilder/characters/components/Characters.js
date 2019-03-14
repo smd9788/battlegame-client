@@ -32,12 +32,17 @@ class Characters extends Component {
         <ul className='character-list-container'>
           {this.state.characters.map(character => (
             <li key={character._id} id={character._id} className='character-list-item'>
-              <Link to={`/characters/${character._id}`}>{character.nickname}</Link>
+              <Link to={`/characters/${character._id}`}>
+                <button className='mainmenu-ui-button'>{character.nickname}</button>
+              </Link>
               <p>{character.charClass}</p>
               <p>Level {character.level}</p>
             </li>
           ))}
         </ul>
+        <Link to="/">
+          <button className='mainmenu-ui-button'>Main Menu</button>
+        </Link>
       </Fragment>
     )
   }
