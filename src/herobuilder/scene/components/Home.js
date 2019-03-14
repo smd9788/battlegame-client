@@ -7,17 +7,17 @@ import '../styles/Home.scss'
 
 const authenticatedOptions = (
   <Fragment>
+    <Link to="/create-character">
+      <button className="ui-button" type="submit">New Character</button>
+    </Link>
+    <Link to="/characters">
+      <button className="ui-button" type="submit">Your Characters</button>
+    </Link>
     <Link to="/change-password">
       <button className="ui-button" type="submit">Change Password</button>
     </Link>
     <Link to="/sign-out">
       <button className="ui-button" type="submit">Sign Out</button>
-    </Link>
-    <Link to="/characters">
-      <button className="ui-button" type="submit">Your Characters</button>
-    </Link>
-    <Link to="/create-character">
-      <button className="ui-button" type="submit">New Character</button>
     </Link>
   </Fragment>
 )

@@ -63,30 +63,32 @@ body {
 .ui-button {
   background-color: $secondary-color;
   border: 0;
-  color: white;
+  color: #fff;
   margin: 10px;
 }
 
 .mainmenu-ui-button {
-  background-color: $secondary-color;
+  background-color: #fff;
   border: 0;
-  color: $primary-color;
+  color: $secondary-color;
+  margin: 5% 0;
 }
 
 .auth-form {
+  background-color: $secondary-color;
+  color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 15% auto 0;
+  line-height: 2.5;
   max-width: 600px;
+  padding: 20px;
 
-  h3,
+  h4,
   input {
     margin-bottom: 5%;
   }
-
-  button {
-    align-self: stretch;
-    max-width: 200px;
+  a {
+    text-align: center;
   }
 }

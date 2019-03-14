@@ -38,31 +38,36 @@ class SignIn extends Component {
     const { email, password } = this.state
 
     return (
-      <form className='auth-form' onSubmit={this.onSignIn}>
-        <h3>Sign In</h3>
-        <label htmlFor="email">Email</label>
-        <input
-          required
-          type="email"
-          name="email"
-          value={email}
-          placeholder="Email"
-          onChange={this.handleChange}
-        />
-        <label htmlFor="password">Password</label>
-        <input
-          required
-          name="password"
-          value={password}
-          type="password"
-          placeholder="Password"
-          onChange={this.handleChange}
-        />
-        <button type="submit">Sign In</button>
-        <Link to="/">
-          <button className='mainmenu-ui-button'>Main Menu</button>
-        </Link>
-      </form>
+      <div>
+        <h1 className="otherscreen-title">HeroBuilder</h1>
+        <form className='auth-form' onSubmit={this.onSignIn}>
+          <h4>Sign In</h4>
+          <label htmlFor="email">Email</label>
+          <input
+            required
+            type="email"
+            name="email"
+            value={email}
+            placeholder="Email"
+            onChange={this.handleChange}
+          />
+          <label htmlFor="password">Password</label>
+          <input
+            required
+            name="password"
+            value={password}
+            type="password"
+            placeholder="Password"
+            onChange={this.handleChange}
+          />
+          <div className="button-container">
+            <button className="ui-button" type="submit">Sign In</button>
+            <Link to="/">
+              <button className='mainmenu-ui-button'>Main Menu</button>
+            </Link>
+          </div>
+        </form>
+      </div>
     )
   }
 }
