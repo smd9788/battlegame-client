@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './App.scss'
 import { Route } from 'react-router-dom'
 import { withRouter } from 'react-router'
+import Alert from 'react-bootstrap/Alert'
 
 import AuthenticatedRoute from './auth/components/AuthenticatedRoute'
 import SignUp from './auth/components/SignUp'
@@ -36,7 +37,7 @@ class MainRoutes extends Component {
   }
 
   render () {
-    const { user } = this.state
+    const { user, alerts } = this.state
 
     return (
       <React.Fragment>
@@ -67,6 +68,13 @@ class MainRoutes extends Component {
         <AuthenticatedRoute user={user} exact path='/create-character' render={() => (
           <CreateCharacter alert={this.alert} user={user} />
         )} />
+        {alerts.map((alert, index) => (
+          <Alert key={index} dismissible variant={alert.type}>
+            <Alert.Heading>
+              {alert.message}
+            </Alert.Heading>
+          </Alert>
+        ))}
       </React.Fragment>
     )
   }
