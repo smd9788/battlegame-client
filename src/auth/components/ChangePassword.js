@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { withRouter } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 
 import { changePassword } from '../api'
 import messages from '../messages'
@@ -59,6 +59,9 @@ class ChangePassword extends Component {
           onChange={this.handleChange}
         />
         <button type="submit">Change Password</button>
+        <Link to="/">
+          <button className='mainmenu-ui-button'>Main Menu</button>
+        </Link>
       </form>
     )
   }
