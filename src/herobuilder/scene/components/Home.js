@@ -38,7 +38,7 @@ const Home = ({ user }) => (
     <div className="homescreen-menu">
       { user && <span className="welcome-message">Welcome, {user.email}</span>}
       <h1 className="homescreen-title">HeroBuilder</h1>
-      <div>
+      <div className="button-container">
         { user ? authenticatedOptions : unauthenticatedOptions }
       </div>
     </div>

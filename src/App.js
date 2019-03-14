@@ -33,13 +33,15 @@ class App extends Component {
           <div className="game-canvas">
             <MainRoutes alert={this.alert}/>
           </div>
-          {alerts.map((alert, index) => (
-            <Alert key={index} dismissible variant={alert.type}>
-              <Alert.Heading>
-                {alert.message}
-              </Alert.Heading>
-            </Alert>
-          ))}
+          <footer>
+            {alerts.map((alert, index) => (
+              <Alert key={index} dismissible variant={alert.type}>
+                <Alert.Heading>
+                  {alert.message}
+                </Alert.Heading>
+              </Alert>
+            ))}
+          </footer>
         </main>
       </React.Fragment>
     )
