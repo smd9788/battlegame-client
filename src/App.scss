@@ -3,6 +3,14 @@ $warning: #f1e681;
 $error: #f08181;
 $charcoal: #ccc;
 
+* {
+  font-family: 'Bungee', cursive;
+}
+
+body {
+  background-color: #333333;
+}
+
 .flash-success,
 .flash-warning,
 .flash-error {
@@ -27,6 +35,18 @@ $charcoal: #ccc;
 
 .flash-error {
   background-color: $error;
+}
+
+.game-canvas {
+  background-color: #4bc653;
+  border: 2px solid;
+  height: 75vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2vh;
+  padding-left: 0;
+  padding-right: 0;
+  width: auto;
 }
 
 .auth-form {
