@@ -5,7 +5,7 @@ import DropdownButton from 'react-bootstrap/DropdownButton'
 const CharacterForm = ({ handleSelect, handleChange, handleSubmit, character }) => (
   <form onSubmit={handleSubmit}>
     <label>Nickname</label>
-    <input placeholder="nickname" name="nickname" onChange={handleChange} value={character.nickname} type="text" />
+    <input placeholder="nickname" name="nickname" onChange={handleChange} type="text" />
     <label>Choose Hero Class</label>
     <DropdownButton id="dropdown-basic-button" title="Classes">
       <Dropdown.Item name="charClass" eventKey="Paladin" onSelect={handleSelect} value="Paladin">Paladin</Dropdown.Item>

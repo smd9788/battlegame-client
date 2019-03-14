@@ -43,12 +43,8 @@ class CreateCharacter extends Component {
     this.setState(updatedField)
   }
 
-  // only handles select on charClass for now. Will need to update if add more
-  // select events
   handleSelect = (eventKey, event) => {
     event.persist()
-    console.log('eventKey is:', eventKey)
-    console.log('event is:', event)
     const updatedField = { [event.target.name]: eventKey }
     this.setState(updatedField)
   }
