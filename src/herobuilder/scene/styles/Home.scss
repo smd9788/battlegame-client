@@ -1,22 +1,30 @@
+$primary-color: #4bc653;
+$secondary-color: #333333;
+
 .homescreen-menu {
+  align-items: center;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin: 14vh 0;
   text-align: center;
 }
 
 .homescreen-title {
+  color: #fff;
   font-size: 7em;
   margin: 2vw;
-  padding: 5vh 0;
+  text-shadow: 5px 3px $secondary-color;
 }
 
-.ui-button {
-  margin: 10px;
+.otherscreen-title {
+  color: #fff;
+  text-shadow: 5px 3px $secondary-color;
 }
 
 .welcome-message {
-  display: flex;
+  color: $secondary-color;
   margin: 15px;
   text-align: left;
+  text-shadow: 1px 1px #fff;
 }

@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-import './App.scss'
-
-import Header from './header/Header'
-import MainRoutes from './MainRoutes'
-
 import Alert from 'react-bootstrap/Alert'
+import Header from './header/Header'
+
+import './App.scss'
+import MainRoutes from './MainRoutes'
 
 class App extends Component {
   constructor () {
@@ -25,22 +24,24 @@ class App extends Component {
   }
 
   render () {
-    const { alerts, user } = this.state
+    const { user, alerts } = this.state
 
     return (
       <React.Fragment>
         <Header user={user} />
-        {alerts.map((alert, index) => (
-          <Alert key={index} dismissible variant={alert.type}>
-            <Alert.Heading>
-              {alert.message}
-            </Alert.Heading>
-          </Alert>
-        ))}
         <main className="container">
           <div className="game-canvas">
-            <MainRoutes />
+            <MainRoutes alert={this.alert}/>
           </div>
+          <footer>
+            {alerts.map((alert, index) => (
+              <Alert key={index} dismissible variant={alert.type}>
+                <Alert.Heading>
+                  {alert.message}
+                </Alert.Heading>
+              </Alert>
+            ))}
+          </footer>
         </main>
       </React.Fragment>
     )
