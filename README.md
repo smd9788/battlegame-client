@@ -1,8 +1,8 @@
-# Battle Game
+# reac*rcade
+# HeroBuilder
 
-This is a 2d action game, which simulates a one versus one battle against a NPC boss.
-Players will gain XP as they complete stages and level up accordingly. Players will
-gain more health and damage as they level up.
+About:
+This app is a foundation for an RPG game that allows users to create heros with their own unique nickname and pre-listed class (see classes below). In the current version I aimed to CRUD all user resources and allow users to create heros. Game is a W.I.P.
 
 Repositories:
 Back end:
@@ -13,42 +13,31 @@ Back end:
 Front end:
 
 ### Technology used:
+  - HTML5/CSS3 (gameboard arranged in a flex-box)
+  - Bootstrap for React (for alerts only)
   - JavaScript
-  - Express.js
   - React.js
-  - Bootstrap for React
-  - Node modules:
-    - ???
 
 ### User Stories:
 1. As a user, I want to sign in and out.
-2. As a signed in user, I want to change passwords.
-3. As a signed in user, I want to play the game.
-4. As a signed in user, I want to see my statistics (level, xp, damage, hp, etc.).
-5. As a signed in user, I want to preview the level up stats
+2. As a signed in user, I want to change passwords and sign out.
+3. As a signed in user, I want to create a hero.
+4. As a signed in user, I want to view my created heros.
+5. As a signed in user, I want to edit the heros I created.
+6. As a signed in user, I want to delete the heros I created with a second confirmation so I don't delete by mistake.
 
 ### WireFrames/ERD:
 ![Wireframe](/images/wireframe.jpg)
 ![ERD](/images/erd.jpg)
 
-### Process Plan:
-
-#### 1. Create database.
-  ##### Tables:
-    - user
-    - characters (user created, saves xp)
-    - levels/xp (simple table with levels and xp values, each as integers)
-    - game instance (time, win/loss, damage done, etc.)
-
-#### 2. Client:
-    - Make home page UI. Basic, just logo with button to trigger signup/in
-    - make auth forms
-    - create fixed position canvas for game display
-    - make basic buttons to "act" as game characters NO art yet. button clicks
-      trigger attack and goes thru game cycle.
-    - make UI for result of battle, display stats, button to play again
-
-
-## Future goals and features:
-  - Add one or two new abilities to user character
-  - Add some randomness to the game. i.e. players attack can miss
+### Process:
+1. Create foundation for game. User CRUD actions
+2. Create CRUD components for user Characters
+#### NEXT STEPS
+1. Fix styling bugs that make menus/forms look weird.
+2. Create XP table in api to translate XP into level
+3. Create seed date for bosses, that user can 1v1 in game
+4. Create some components with methods that simulate an attack on boss
+5. Create some components with methods that simulate an attack from boss on user
+6. handle result of battle. store xp and stats in api
+7. add unique abilities to each class
