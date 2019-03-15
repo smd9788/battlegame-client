@@ -74,9 +74,7 @@ class Character extends Component {
         <Link to="/characters">
           <button className="ui-button" type="submit">Your Heros</button>
         </Link>
-        <Link to="/">
-          <button className='mainmenu-ui-button'>Main Menu</button>
-        </Link>
+        <button className="ui-button"><Link to="/">Main Menu</Link></button>
       </React.Fragment>
     )
   }

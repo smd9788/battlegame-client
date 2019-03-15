@@ -1,7 +1,7 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-import '../characters.scss'
+import '../styles/characters.scss'
 
 import apiUrl from '../../../apiConfig'
 
@@ -28,23 +28,21 @@ class Characters extends Component {
 
   render () {
     return (
-      <Fragment>
+      <div className='character-list-container'>
         <h3 className='title-header'>Your Heros:</h3>
-        <div className='character-list-container'>
+        <div className='your-characters'>
           {this.state.characters.map(character => (
-            <li key={character._id} id={character._id} className='character-list-item'>
+            <div className="auth-menu" key={character._id} id={character._id}>
               <Link to={`/characters/${character._id}`}>
-                <button className='mainmenu-ui-button'>{character.nickname}</button>
+                <button className='ui-button'>{character.nickname}</button>
               </Link>
               <p>{character.charClass}</p>
               <p>Level {character.level}</p>
-            </li>
+            </div>
           ))}
         </div>
-        <Link to="/">
-          <button className='mainmenu-ui-button'>Main Menu</button>
-        </Link>
-      </Fragment>
+        <button className="ui-button"><Link to="/">Main Menu</Link></button>
+      </div>
     )
   }
 }

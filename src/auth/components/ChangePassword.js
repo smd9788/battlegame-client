@@ -60,9 +60,7 @@ class ChangePassword extends Component {
             onChange={this.handleChange}
           />
           <button type="submit">Change Password</button>
-          <Link to="/">
-            <button className='mainmenu-ui-button'>Main Menu</button>
-          </Link>
+          <button className="ui-button"><Link to="/">Main Menu</Link></button>
         </form>
       </div>
     )

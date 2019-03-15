@@ -1,0 +1,28 @@
+.character-list-container {
+  border: 1px solid white;
+  display: flex;
+  height: inherit;
+}
+
+.your-characters {
+  border: 1px solid yellow;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.character-list-item {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+
+.characterform-container {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
