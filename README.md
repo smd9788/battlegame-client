@@ -40,7 +40,7 @@ Front end:
 6. As a signed in user, I want to delete the heros I created with a second confirmation so I don't delete by mistake.
 
 ### WireFrames/ERD:
-![View Wireframe]('../public/images/wireframe.jpg')
+![View Wireframe]('./public/images/wireframe.jpg')
 NEED TO UPDATE for new app direction and design
 
 ### Process:
