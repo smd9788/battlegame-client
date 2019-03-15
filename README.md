@@ -40,8 +40,8 @@ Front end:
 6. As a signed in user, I want to delete the heros I created with a second confirmation so I don't delete by mistake.
 
 ### WireFrames/ERD:
-![Wireframe](/images/wireframe.jpg)
-![ERD](/images/erd.jpg)
+![View](https://imgur.com/hh2729K)
+NEED TO UPDATE for new app direction
 
 ### Process:
 1. Create foundation for game. User CRUD actions
