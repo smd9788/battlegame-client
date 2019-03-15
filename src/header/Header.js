@@ -5,8 +5,10 @@ import './Header.scss'
 
 const Header = ({ user }) => (
   <nav className="main-header">
-    <h1 className="header-logo">Reac*rcade</h1>
-    <span className="header-content"><Link to="/">Main Menu</Link></span>
+    <div className="header-content">
+      <h1 className="header-logo">Reac*<span className="rcade-text">rcade</span></h1>
+      <span><Link to="/">Main Menu</Link></span>
+    </div>
   </nav>
 )
 

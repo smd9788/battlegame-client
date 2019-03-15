@@ -1,28 +1,20 @@
 $charcoal: #bbb;
 $primary-color: #4bc653;
+$nav-color: #000;
 
 .main-header {
-  align-items: center;
-  background-color: black;
+  background-color: $nav-color;
   border-bottom: 1px solid $charcoal;
   display: flex;
   height: 10vh;
-  padding: 0 20px;
 
   .header-logo {
-    color: #4bc653;
+    color: $primary-color;
     font-family: 'Black Ops One', cursive;
     font-size: 3em;
-    margin: 0 15px;
-    padding: 1vh;
-    text-shadow: 1px 1px 2px #fff;
+    text-shadow: 2px 2px 2px #fff;
   }
   span {
-    flex-direction: column;
-    flex-grow: 1;
-    font-size: 2em;
-    margin: 0 15px;
-    text-align: right;
 
     a {
       color: $primary-color;

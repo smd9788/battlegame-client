@@ -25,10 +25,10 @@ const authenticatedOptions = (
 const unauthenticatedOptions = (
   <Fragment>
     <Link to="/sign-up">
-      <button className="ui-button" type="submit">Sign Up</button>
+      <button className="ui-button" type="submit">Register</button>
     </Link>
     <Link to="/sign-in">
-      <button className="ui-button" type="submit">Sign In</button>
+      <button className="ui-button" type="submit">Login</button>
     </Link>
   </Fragment>
 )

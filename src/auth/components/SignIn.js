@@ -41,7 +41,7 @@ class SignIn extends Component {
       <div>
         <h1 className="otherscreen-title">HeroBuilder</h1>
         <form className='auth-form' onSubmit={this.onSignIn}>
-          <h4>Sign In</h4>
+          <h4>Login</h4>
           <label htmlFor="email">Email</label>
           <input
             required
@@ -61,10 +61,8 @@ class SignIn extends Component {
             onChange={this.handleChange}
           />
           <div className="button-container">
-            <button className="ui-button" type="submit">Sign In</button>
-            <Link to="/">
-              <button className='mainmenu-ui-button'>Main Menu</button>
-            </Link>
+            <button className="ui-button" type="submit">Login</button>
+            <button className="ui-button"><Link to="/">Main Menu</Link></button>
           </div>
         </form>
       </div>
