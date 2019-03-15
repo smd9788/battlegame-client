@@ -1,8 +1,21 @@
 # reac*rcade
 # HeroBuilder
 
-About:
-This app is a foundation for an RPG game that allows users to create heros with their own unique nickname and pre-listed class (see classes below). In the current version I aimed to CRUD all user resources and allow users to create heros. Game is a W.I.P.
+Test my game out here: [reac*Rcade](https://smd9788.github.io/battlegame-client/#/)
+
+If you want to work on this app for yourself follow these steps to clone:
+## Preparation
+
+1. Fork and clone this repository.
+1. Create a new branch for your work and change into it.
+1. Install dependencies with `npm install`
+
+## About
+
+This app is a foundation for a React based browser arcade. The first game in the arcade is HeroBuilder, an RPG game that allows users to create heros with their own unique nickname and class. Users can view their own heros, edit them, and delete them.
+
+### Current state of app:
+In the current version I aimed to CRUD all user resources and allow users to create heros. Game logic is a W.I.P.
 
 Repositories:
 Back end:
@@ -41,3 +54,4 @@ Front end:
 5. Create some components with methods that simulate an attack from boss on user
 6. handle result of battle. store xp and stats in api
 7. add unique abilities to each class
+8. TRANSFORM game into a simple component of the overall arcade where user can click a screenshot-esque thing to link over to the game
