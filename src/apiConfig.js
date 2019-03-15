@@ -1,6 +1,6 @@
 let apiUrl
 const apiUrls = {
-  production: 'https://battlegame-smd9788.herokuapp.com',
+  production: 'https://reactrcade-api.herokuapp.com',
   development: 'http://localhost:4741'
 }
 
