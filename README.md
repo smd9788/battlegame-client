@@ -7,29 +7,30 @@ If you want to work on this app for yourself follow these steps to clone:
 ## Preparation
 
 1. Fork and clone this repository.
-1. Create a new branch for your work and change into it.
-1. Install dependencies with `npm install`
+2. Create a new branch for your work and change into it.
+3. Install dependencies with `npm install`
 
 ## About
 
-This app is a foundation for a React based browser arcade. The first game in the arcade is HeroBuilder, an RPG game that allows users to create heros with their own unique nickname and class. Users can view their own heros, edit them, and delete them.
+This app is a foundation for a React based browser arcade. The first "game" in the arcade is HeroBuilder, a RPG style game that allows users to create heros with their own unique nickname and class. Users can view their own heros, edit them, and delete them.
 
 ### Current state of app:
 In the current version I aimed to CRUD all user resources and allow users to create heros. Game logic is a W.I.P.
 
-Repositories:
-Back end:
-Front end:
+GitHub Repositories:
+Back end: https://github.com/smd9788/battlegame-api
+Front end: https://github.com/smd9788/battlegame-client
 
 Deployed Sites:
-Back end:
-Front end:
+Back end: https://reactrcade-api.herokuapp.com/
+Front end: https://smd9788.github.io/battlegame-client/
 
-### Technology used:
-  - HTML5/CSS3 (gameboard arranged in a flex-box)
+### Technology used on client:
+  - HTML5/CSS3 (gameboard arranged in a css flex-box)
   - Bootstrap for React (for alerts only)
   - JavaScript
   - React.js
+  - No additional modules yet
 
 ### User Stories:
 1. As a user, I want to sign in and out.
@@ -40,18 +41,16 @@ Front end:
 6. As a signed in user, I want to delete the heros I created with a second confirmation so I don't delete by mistake.
 
 ### WireFrames/ERD:
-![View]('https://imgur.com/a/vCzeKl5')
-NEED TO UPDATE for new app direction and design
+![View]('public/images/wireframe_erd.jpg')
 
 ### Process:
-1. Create foundation for game. User CRUD actions
+1. Create foundation for arcade and a sample game, HeroBuilder. Create and test user CRUD actions
 2. Create CRUD components for user Characters
 #### NEXT STEPS
-1. Fix styling bugs that make menus/forms look weird.
-2. Create XP table in api to translate XP into level
-3. Create seed date for bosses, that user can 1v1 in game
-4. Create some components with methods that simulate an attack on boss
-5. Create some components with methods that simulate an attack from boss on user
-6. handle result of battle. store xp and stats in api
-7. add unique abilities to each class
-8. TRANSFORM game into a simple component of the overall arcade where user can click a screenshot-esque thing to link over to the game
+1. Create XP table in api to translate XP into level
+2. Create seed date for bosses, that user can 1v1 in game
+3. Create some components with methods that simulate an attack on boss
+4. Create some components with methods that simulate an attack from boss on user
+5. handle result of battle. store xp and stats in api
+6. add unique abilities to each class
+7. TRANSFORM game into a simple component of the overall arcade where user can click a screenshot-esque thing to link over to the game
