@@ -61,22 +61,22 @@ class Character extends Component {
     const { nickname, charClass, level, id } = character
 
     return (
-      <React.Fragment>
+      <div className='character-list-container'>
         <h1 className="otherscreen-title">HeroBuilder</h1>
-        <article>
-          <h4>{nickname}</h4>
+        <article className="auth-form">
+          <h3>{nickname}</h3>
           <p>Class: {charClass}</p>
           <p>Level {level}</p>
-          <button className='ui-button' onClick={() => this.deleteCharacter(id)}>Delete</button>
-          <Link to={`/characters/${this.props.match.params.id}/update`}>
-            <button className='ui-button'>Update</button>
-          </Link>
+          <div className="character-button-container">
+            <button className='ui-button' onClick={() => this.deleteCharacter(id)}>Delete</button>
+            <button className='ui-button'><Link to={`/characters/${this.props.match.params.id}/update`}>Update</Link></button>
+          </div>
         </article>
-        <Link to="/characters">
-          <button className="ui-button" type="submit">Your Heros</button>
-        </Link>
-        <button className="ui-button"><Link to="/">Main Menu</Link></button>
-      </React.Fragment>
+        <div className="button-container">
+          <button className="ui-button" type="submit"><Link to="/characters">Your Heros</Link></button>
+          <button className="mm-ui-button"><Link to="/">Main Menu</Link></button>
+        </div>
+      </div>
     )
   }
 }
