@@ -1,5 +1,5 @@
-$primary-color: #4bc653;
-$secondary-color: #333333;
+$primary-color: #333333;
+$secondary-color: #db2537;
 
 .homescreen-menu {
   align-items: center;
@@ -16,14 +16,10 @@ $secondary-color: #333333;
   text-shadow: 5px 3px $secondary-color;
 }
 
-.otherscreen-title {
-  color: #fff;
-  text-shadow: 5px 3px $secondary-color;
-}
-
 .welcome-message {
-  color: $secondary-color;
+  color: #fff;
+  font-size: 2rem;
   margin: 15px;
   text-align: left;
-  text-shadow: 1px 1px #fff;
+  text-shadow: 1px 1px $secondary-color;
 }

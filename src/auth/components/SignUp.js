@@ -40,7 +40,7 @@ class SignUp extends Component {
     const { email, password, passwordConfirmation } = this.state
 
     return (
-      <div>
+      <div className="auth-screens">
         <h1 className="otherscreen-title">HeroBuilder</h1>
         <form className='auth-form' onSubmit={this.onSignUp}>
           <h4>Register</h4>
@@ -73,7 +73,7 @@ class SignUp extends Component {
           />
           <div className="button-container">
             <button className="ui-button" type="submit">Sign Up</button>
-            <button className="ui-button"><Link to="/">Main Menu</Link></button>
+            <button className="mm-ui-button"><Link to="/">Main Menu</Link></button>
           </div>
         </form>
       </div>

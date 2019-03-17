@@ -37,7 +37,7 @@ class ChangePassword extends Component {
     const { oldPassword, newPassword } = this.state
 
     return (
-      <div>
+      <div className="auth-screens">
         <h1 className="otherscreen-title">HeroBuilder</h1>
         <form className='auth-form' onSubmit={this.onChangePassword}>
           <h3>Change Password</h3>
@@ -60,7 +60,7 @@ class ChangePassword extends Component {
             onChange={this.handleChange}
           />
           <button type="submit">Change Password</button>
-          <button className="ui-button"><Link to="/">Main Menu</Link></button>
+          <button className="mm-ui-button"><Link to="/">Main Menu</Link></button>
         </form>
       </div>
     )

@@ -1,21 +1,41 @@
+$primary-color: #333333;
+$secondary-color: #db2537;
+
 .character-list-container {
-  border: 1px solid white;
   display: flex;
-  height: inherit;
+  flex-direction: column;
 }
 
 .your-characters {
-  border: 1px solid yellow;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  height: 45vh;
+  margin-bottom: 2vh;
+  overflow: auto;
+  width: 50vw;
 }
 
 .character-list-item {
-  border: 1px solid black;
+  align-items: center;
+  background-color: $secondary-color;
   display: flex;
-  flex-direction: column;
-  margin: 5px;
+  margin: 4px;
+  padding: 30px;
+
+  a {
+    color: $primary-color;
+    flex-grow: 1;
+    font-size: 1.5rem;
+    text-decoration: none;
+    &:hover {
+      color: #fff;
+      text-shadow: 1px 1px 5px cyan;
+    }
+  }
+  p {
+    color: #fff;
+    margin: 0 .5rem;
+  }
 }
 
 .characterform-container {

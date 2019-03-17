@@ -2,8 +2,8 @@ $success: #c7f282;
 $warning: #f1e681;
 $error: #f08181;
 $charcoal: #ccc;
-$primary-color: #4bc653;
-$secondary-color: #333333;
+$primary-color: #333333;
+$secondary-color: #db2537;
 
 * {
   font-family: 'Bungee', cursive;
@@ -44,11 +44,15 @@ body {
   background-color: $primary-color;
   border: 2px solid #bbb;
   display: flex;
+  flex-wrap: wrap;
   height: 70vh;
   justify-content: center;
+  max-width: 70vw;
 }
 
 .button-container {
+  background-color: $secondary-color;
+  border: 2px solid #fff;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
@@ -63,29 +67,45 @@ body {
   font-size: 1.5rem;
   font-weight: lighter;
   margin: 10px;
-}
-
-.ui-button:hover {
   text-shadow: 1px 1px 5px $primary-color;
+  a {
+    color: $primary-color;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
 }
 
-.mainmenu-ui-button {
+.mm-ui-button {
   background-color: #fff;
   border: 0;
-  color: red;
+  border-radius: 0 0 10px 10px;
   font-family: 'Quattrocento Sans', sans-serif;
-  font-size: 1rem;
-  margin: 5% 0;
+  a {
+    color: $secondary-color;
+    text-decoration: none;
+  }
+}
+
+.auth-screens {
+  display: flex;
+  flex-direction: column;
+}
+
+.otherscreen-title {
+  color: #fff;
+  margin-top: 2vh;
+  text-shadow: 5px 3px $secondary-color;
 }
 
 .auth-form {
   background-color: $secondary-color;
+  border: 2px solid #fff;
   border-radius: 16px;
   color: #fff;
   display: flex;
   flex-direction: column;
   line-height: 2.5;
-  max-width: 600px;
+  margin-bottom: auto;
   padding: 20px;
 
   h4,
@@ -94,9 +114,5 @@ body {
   }
   input {
     font-family: 'Roboto', sans-serif;
-  }
-  a {
-    color: red;
-    text-align: center;
   }
 }

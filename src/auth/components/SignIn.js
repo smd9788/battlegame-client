@@ -38,7 +38,7 @@ class SignIn extends Component {
     const { email, password } = this.state
 
     return (
-      <div>
+      <div className="auth-screens">
         <h1 className="otherscreen-title">HeroBuilder</h1>
         <form className='auth-form' onSubmit={this.onSignIn}>
           <h4>Login</h4>
@@ -62,7 +62,7 @@ class SignIn extends Component {
           />
           <div className="button-container">
             <button className="ui-button" type="submit">Login</button>
-            <button className="ui-button"><Link to="/">Main Menu</Link></button>
+            <button className="mm-ui-button"><Link to="/">Main Menu</Link></button>
           </div>
         </form>
       </div>

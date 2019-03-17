@@ -28,21 +28,24 @@ class Characters extends Component {
 
   render () {
     return (
-      <div className='character-list-container'>
-        <h3 className='title-header'>Your Heros:</h3>
-        <div className='your-characters'>
-          {this.state.characters.map(character => (
-            <div className="auth-menu" key={character._id} id={character._id}>
-              <Link to={`/characters/${character._id}`}>
-                <button className='ui-button'>{character.nickname}</button>
-              </Link>
-              <p>{character.charClass}</p>
-              <p>Level {character.level}</p>
+      <React.Fragment>
+        <h1 className="otherscreen-title">HeroBuilder</h1>
+        <div className='character-list-container'>
+          <h3 className='otherscreen-title'>Your Heros:</h3>
+          <div>
+            <div className='your-characters'>
+              {this.state.characters.map(character => (
+                <div className="character-list-item" key={character._id} id={character._id}>
+                  <Link to={`/characters/${character._id}`}>{character.nickname}</Link>
+                  <p>Level {character.level}</p>
+                  <p>{character.charClass}</p>
+                </div>
+              ))}
             </div>
-          ))}
+            <button className="mm-ui-button"><Link to="/">Main Menu</Link></button>
+          </div>
         </div>
-        <button className="ui-button"><Link to="/">Main Menu</Link></button>
-      </div>
+      </React.Fragment>
     )
   }
 }
