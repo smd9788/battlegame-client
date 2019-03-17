@@ -34,7 +34,6 @@ Front end: https://smd9788.github.io/battlegame-client/
   - Bootstrap for React (for alerts only)
   - JavaScript
   - React.js
-  - No additional modules yet
 
 ### User Stories:
 1. As a user, I want to sign in and out.
