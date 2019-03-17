@@ -45,11 +45,17 @@ $secondary-color: #db2537;
   }
 }
 
+.dropdown-item {
+  text-shadow: none;
+}
+
 .characterform-container {
   align-items: center;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: center;
+
+  .auth-form {
+    margin-top: 2rem;
+    width: 23vw;
+  }
 }

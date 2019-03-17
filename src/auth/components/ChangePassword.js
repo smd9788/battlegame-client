@@ -40,7 +40,7 @@ class ChangePassword extends Component {
       <div className="auth-screens">
         <h1 className="otherscreen-title">HeroBuilder</h1>
         <form className='auth-form' onSubmit={this.onChangePassword}>
-          <h3>Change Password</h3>
+          <h4>Change Password</h4>
           <label htmlFor="oldpw">Old Password</label>
           <input
             required
@@ -59,8 +59,10 @@ class ChangePassword extends Component {
             placeholder="New Password"
             onChange={this.handleChange}
           />
-          <button type="submit">Change Password</button>
-          <button className="mm-ui-button"><Link to="/">Main Menu</Link></button>
+          <div className="button-container">
+            <button className="ui-button" type="submit">Change Password</button>
+            <button className="mm-ui-button"><Link to="/">Main Menu</Link></button>
+          </div>
         </form>
       </div>
     )

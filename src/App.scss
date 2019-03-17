@@ -105,14 +105,25 @@ body {
   display: flex;
   flex-direction: column;
   line-height: 2.5;
-  margin-bottom: auto;
   padding: 20px;
+  text-shadow: 1px 1px 5px $primary-color;
 
+  h3 {
+    color: yellow;
+    text-shadow: 1px 1px 5px $primary-color;
+    transition: transform 3s;
+    &:hover {
+      transform: scale(1.1);
+  }
+  }
+  h3,
   h4,
   input {
-    margin-bottom: 5%;
+    margin: .5rem;
+    padding: 3px;
   }
   input {
     font-family: 'Roboto', sans-serif;
+    margin-left: 0;
   }
 }

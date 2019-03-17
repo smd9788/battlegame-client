@@ -18,11 +18,11 @@ const CharacterForm = ({ handleSelect, handleChange, handleSubmit, character }) 
         <Dropdown.Item name="charClass" eventKey="Warrior" onSelect={handleSelect} value="Warrior">Warrior</Dropdown.Item>
         <Dropdown.Item name="charClass" eventKey="Wizard" onSelect={handleSelect} value="Wizard">Wizard</Dropdown.Item>
       </DropdownButton>
-      <p>{character.charClass}</p>
+      <h3>{character.charClass}</h3>
       <p>Level {character.level}</p>
       <div className="button-container">
         <button type="submit" className="ui-button" >Submit</button>
-        <button className="ui-button"><Link to="/">Main Menu</Link></button>
+        <button className="mm-ui-button"><Link to="/">Main Menu</Link></button>
       </div>
     </form>
   </div>

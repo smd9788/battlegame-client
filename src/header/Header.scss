@@ -3,24 +3,22 @@ $primary-color: #4bc653;
 $nav-color: #000;
 
 .main-header {
-  background-color: $nav-color;
+  background-color: #fff;
   border-bottom: 1px solid $charcoal;
-  display: flex;
   height: 10vh;
+  margin-bottom: 2vh;
+  text-align: right;
 
-  .header-logo {
-    color: $primary-color;
-    font-family: 'Black Ops One', cursive;
-    font-size: 3em;
-    text-shadow: 2px 2px 2px #fff;
-  }
-  span {
-
-    a {
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 18vw;
+    .header-logo {
       color: $primary-color;
       font-family: 'Black Ops One', cursive;
-      text-decoration: none;
-      text-shadow: 1px 1px 2px #fff;
+      font-size: 3em;
+      padding-top: 2vh;
+      text-shadow: 2px 2px 2px #000;
     }
   }
 }
