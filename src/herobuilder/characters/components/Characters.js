@@ -27,11 +27,22 @@ class Characters extends Component {
   }
 
   render () {
+    if (this.state.characters.length === 0) {
+      return (
+        <div className='your-characters'>
+          <h3 className='otherscreen-title'>No heroes. Create some now!</h3>
+          <div className="button-container">
+            <button className="ui-button" type="submit"><Link to="/create-character">New Hero</Link></button>
+            <button className="mm-ui-button"><Link to="/">Main Menu</Link></button>
+          </div>
+        </div>
+      )
+    }
     return (
       <React.Fragment>
         <h1 className="otherscreen-title">HeroBuilder</h1>
         <div className='character-list-container'>
-          <h3 className='otherscreen-title'>Your Heros:</h3>
+          <h3 className='otherscreen-title'>Your Heroes:</h3>
           <div>
             <div className='your-characters'>
               {this.state.characters.map(character => (

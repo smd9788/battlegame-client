@@ -8,5 +8,10 @@ export default {
   signOutSuccess: 'Come back soon!',
   changePasswordSuccess: 'Password changed successfully!',
   changePasswordFailure: 'Failed to change passwords. Check your old password' +
-                         ' and try again.'
+                         ' and try again.',
+  createCharacterSuccess: 'You have successfully created a hero!',
+  createCharacterFailure: 'Failed to create hero. Please fill out all forms',
+  deleteCharacterSuccess: 'You have successfully deleted your hero. Create more!',
+  deleteCharacterFailure: 'Failed to delete hero. Please restart app and try again',
+  getCharacterFailure: 'Failed to retrieve heroes, or you have not made any yet'
 }
