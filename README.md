@@ -41,8 +41,8 @@ Front end: https://smd9788.github.io/battlegame-client/
 6. As a signed in user, I want to delete the heros I created with a second confirmation so I don't delete by mistake.
 
 ### WireFrames/ERD:
-![wireframe]('public/images/wireframe.jpg')
-![erd]('public/images/erd.jpg')
+![wireframe](/public/images/wireframe.jpg)
+![erd](/public/images/erd.jpg)
 
 ### Process:
 1. Create foundation for arcade and a sample game, HeroBuilder. Create and test user CRUD actions
