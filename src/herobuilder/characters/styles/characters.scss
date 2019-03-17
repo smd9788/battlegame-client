@@ -20,21 +20,28 @@ $secondary-color: #db2537;
   background-color: $secondary-color;
   display: flex;
   margin: 4px;
-  padding: 30px;
+  padding: 21px;
 
   a {
     color: $primary-color;
     flex-grow: 1;
-    font-size: 1.5rem;
+    font-size: .85rem;
+    padding: 0 10px;
     text-decoration: none;
     &:hover {
       color: #fff;
       text-shadow: 1px 1px 5px cyan;
     }
   }
+  h2 {
+    color: #fff;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 5px cyan;
+  }
   p {
     color: #fff;
     margin: 0 .5rem;
+    text-shadow: 1px 1px 5px $primary-color;
   }
 }
 

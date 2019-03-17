@@ -62,6 +62,7 @@ class Character extends Component {
 
     return (
       <React.Fragment>
+        <h1 className="otherscreen-title">HeroBuilder</h1>
         <article>
           <h4>{nickname}</h4>
           <p>Class: {charClass}</p>
