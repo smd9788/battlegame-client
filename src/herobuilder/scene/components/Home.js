@@ -8,10 +8,10 @@ import '../styles/Home.scss'
 const authenticatedOptions = (
   <Fragment>
     <Link to="/create-character">
-      <button className="ui-button" type="submit">New Character</button>
+      <button className="ui-button" type="submit">New Hero</button>
     </Link>
     <Link to="/characters">
-      <button className="ui-button" type="submit">Your Characters</button>
+      <button className="ui-button" type="submit">Your Heroes</button>
     </Link>
     <Link to="/change-password">
       <button className="ui-button" type="submit">Change Password</button>
