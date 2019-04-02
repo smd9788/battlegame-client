@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import apiUrl from '../../../apiConfig'
 import axios from 'axios'
 import { withRouter, Redirect } from 'react-router'
@@ -84,7 +84,7 @@ class UpdateCharacter extends Component {
       return <Redirect to={`/characters/${this.state.character._id}`} />
     }
     return (
-      <Fragment>
+      <div className='game-screens'>
         { message && <Alert variant="danger">{message}</Alert> }
         <CharacterForm
           handleChange={handleChange}
@@ -92,7 +92,7 @@ class UpdateCharacter extends Component {
           handleSelect={handleSelect}
           character={character}
         />
-      </Fragment>
+      </div>
     )
   }
 }

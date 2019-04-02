@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import apiUrl from '../../../apiConfig'
 import axios from 'axios'
 import { Redirect } from 'react-router'
@@ -58,7 +58,7 @@ class CreateCharacter extends Component {
 
     const { handleChange, handleSubmit, handleSelect } = this
     return (
-      <Fragment>
+      <div className='game-screens'>
         { message && <Alert variant="danger">{message}</Alert> }
         <CharacterForm
           handleChange={handleChange}
@@ -66,7 +66,7 @@ class CreateCharacter extends Component {
           handleSelect={handleSelect}
           character={{ nickname, level, charClass }}
         />
-      </Fragment>
+      </div>
     )
   }
 }

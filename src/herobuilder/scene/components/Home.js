@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 // import { Link, Route } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 // import SignUp from '../../../auth/components/SignUp'
@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import '../styles/Home.scss'
 
 const authenticatedOptions = (
-  <Fragment>
+  <div className='game-screens'>
     <Link to="/create-character">
       <button className="ui-button" type="submit">New Hero</button>
     </Link>
@@ -19,22 +19,22 @@ const authenticatedOptions = (
     <Link to="/sign-out">
       <button className="ui-button" type="submit">Sign Out</button>
     </Link>
-  </Fragment>
+  </div>
 )
 
 const unauthenticatedOptions = (
-  <Fragment>
+  <div className='game-screens'>
     <Link to="/sign-up">
       <button className="ui-button" type="submit">Register</button>
     </Link>
     <Link to="/sign-in">
       <button className="ui-button" type="submit">Login</button>
     </Link>
-  </Fragment>
+  </div>
 )
 
 const Home = ({ user }) => (
-  <Fragment>
+  <div className='game-screens'>
     <div className="homescreen-menu">
       { user && <span className="welcome-message">Welcome, {user.email}</span>}
       <h1 className="homescreen-title">HeroBuilder</h1>
@@ -42,7 +42,7 @@ const Home = ({ user }) => (
         { user ? authenticatedOptions : unauthenticatedOptions }
       </div>
     </div>
-  </Fragment>
+  </div>
 )
 
 export default Home
