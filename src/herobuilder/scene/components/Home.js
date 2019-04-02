@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import '../styles/Home.scss'
 
 const authenticatedOptions = (
-  <div className='game-screens'>
+  <React.Fragment>
     <Link to="/create-character">
       <button className="ui-button" type="submit">New Hero</button>
     </Link>
@@ -19,30 +19,30 @@ const authenticatedOptions = (
     <Link to="/sign-out">
       <button className="ui-button" type="submit">Sign Out</button>
     </Link>
-  </div>
+  </React.Fragment>
 )
 
 const unauthenticatedOptions = (
-  <div className='game-screens'>
+  <React.Fragment>
     <Link to="/sign-up">
       <button className="ui-button" type="submit">Register</button>
     </Link>
     <Link to="/sign-in">
       <button className="ui-button" type="submit">Login</button>
     </Link>
-  </div>
+  </React.Fragment>
 )
 
 const Home = ({ user }) => (
-  <div className='game-screens'>
-    <div className="homescreen-menu">
+  <React.Fragment>
+    <div className="game-screens">
       { user && <span className="welcome-message">Welcome, {user.email}</span>}
       <h1 className="homescreen-title">HeroBuilder</h1>
       <div className="button-container">
         { user ? authenticatedOptions : unauthenticatedOptions }
       </div>
     </div>
-  </div>
+  </React.Fragment>
 )
 
 export default Home

@@ -43,7 +43,7 @@ class SignUp extends Component {
       <React.Fragment>
         <div className="game-screens">
           <h1 className="otherscreen-title">HeroBuilder</h1>
-          <form className='auth-form' onSubmit={this.onSignUp}>
+          <form className='auth-form' autoComplete="off" onSubmit={this.onSignUp}>
             <h4>Register</h4>
             <label htmlFor="email">Email</label>
             <input
