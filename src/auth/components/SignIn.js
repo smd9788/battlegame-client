@@ -37,9 +37,9 @@ class SignIn extends Component {
     const { email, password } = this.state
 
     return (
-      <div className="auth-screens">
+      <div className="game-screens">
         <h1 className="otherscreen-title">HeroBuilder</h1>
-        <form className='auth-form' onSubmit={this.onSignIn}>
+        <form className='auth-form' autoComplete="off" onSubmit={this.onSignIn}>
           <h4>Login</h4>
           <label htmlFor="email">Email</label>
           <input

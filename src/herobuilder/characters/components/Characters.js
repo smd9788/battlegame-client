@@ -39,7 +39,7 @@ class Characters extends Component {
       )
     }
     return (
-      <React.Fragment>
+      <div className='game-screens'>
         <h1 className="otherscreen-title">HeroBuilder</h1>
         <div className='character-list-container'>
           <h3 className='otherscreen-title'>Your Heroes:</h3>
@@ -58,7 +58,7 @@ class Characters extends Component {
           </div>
           <button className="mm-ui-button"><Link to="/">Main Menu</Link></button>
         </div>
-      </React.Fragment>
+      </div>
     )
   }
 }

@@ -7,7 +7,7 @@ import '../styles/characters.scss'
 const CharacterForm = ({ handleSelect, handleChange, handleSubmit, character }) => (
   <div className="characterform-container">
     <h1 className="otherscreen-title">HeroBuilder</h1>
-    <form className="auth-form" onSubmit={handleSubmit}>
+    <form className="auth-form" autoComplete="off" onSubmit={handleSubmit}>
       <label>Nickname</label>
       <input placeholder="nickname" name="nickname" onChange={handleChange} type="text" />
       <label>Choose Hero Class</label>

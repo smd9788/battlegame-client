@@ -63,20 +63,22 @@ class Character extends Component {
     const { nickname, charClass, level, id } = character
 
     return (
-      <div className='character-list-container'>
-        <h1 className="otherscreen-title">HeroBuilder</h1>
-        <article className="auth-form">
-          <h3>{nickname}</h3>
-          <p>Class: {charClass}</p>
-          <p>Level {level}</p>
-          <div className="character-button-container">
-            <button className='ui-button' onClick={() => this.deleteCharacter(id)}>Delete</button>
-            <button className='ui-button'><Link to={`/characters/${this.props.match.params.id}/update`}>Update</Link></button>
+      <div className='game-screens'>
+        <div className='character-list-container'>
+          <h1 className="otherscreen-title">HeroBuilder</h1>
+          <article className="auth-form">
+            <h3>{nickname}</h3>
+            <p>Class: {charClass}</p>
+            <p>Level {level}</p>
+            <div className="character-button-container">
+              <button className='ui-button' onClick={() => this.deleteCharacter(id)}>Delete</button>
+              <button className='ui-button'><Link to={`/characters/${this.props.match.params.id}/update`}>Update</Link></button>
+            </div>
+          </article>
+          <div className="button-container">
+            <button className="ui-button" type="submit"><Link to="/characters">Your Heroes</Link></button>
+            <button className="mm-ui-button"><Link to="/">Main Menu</Link></button>
           </div>
-        </article>
-        <div className="button-container">
-          <button className="ui-button" type="submit"><Link to="/characters">Your Heroes</Link></button>
-          <button className="mm-ui-button"><Link to="/">Main Menu</Link></button>
         </div>
       </div>
     )

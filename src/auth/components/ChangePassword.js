@@ -37,9 +37,9 @@ class ChangePassword extends Component {
     const { oldPassword, newPassword } = this.state
 
     return (
-      <div className="auth-screens">
+      <div className="game-screens">
         <h1 className="otherscreen-title">HeroBuilder</h1>
-        <form className='auth-form' onSubmit={this.onChangePassword}>
+        <form className='auth-form' autoComplete="off" onSubmit={this.onChangePassword}>
           <h4>Change Password</h4>
           <label htmlFor="oldpw">Old Password</label>
           <input

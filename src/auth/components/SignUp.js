@@ -40,43 +40,45 @@ class SignUp extends Component {
     const { email, password, passwordConfirmation } = this.state
 
     return (
-      <div className="auth-screens">
-        <h1 className="otherscreen-title">HeroBuilder</h1>
-        <form className='auth-form' onSubmit={this.onSignUp}>
-          <h4>Register</h4>
-          <label htmlFor="email">Email</label>
-          <input
-            required
-            name="email"
-            value={email}
-            type="email"
-            placeholder="Email"
-            onChange={this.handleChange}
-          />
-          <label htmlFor="password">Password</label>
-          <input
-            required
-            name="password"
-            value={password}
-            type="password"
-            placeholder="Password"
-            onChange={this.handleChange}
-          />
-          <label htmlFor="passwordConfirmation">Confirm Password</label>
-          <input
-            required
-            name="passwordConfirmation"
-            value={passwordConfirmation}
-            type="password"
-            placeholder="Confirm Password"
-            onChange={this.handleChange}
-          />
-          <div className="button-container">
-            <button className="ui-button" type="submit">Sign Up</button>
-            <button className="mm-ui-button"><Link to="/">Main Menu</Link></button>
-          </div>
-        </form>
-      </div>
+      <React.Fragment>
+        <div className="game-screens">
+          <h1 className="otherscreen-title">HeroBuilder</h1>
+          <form className='auth-form' autoComplete="off" onSubmit={this.onSignUp}>
+            <h4>Register</h4>
+            <label htmlFor="email">Email</label>
+            <input
+              required
+              name="email"
+              value={email}
+              type="email"
+              placeholder="Email"
+              onChange={this.handleChange}
+            />
+            <label htmlFor="password">Password</label>
+            <input
+              required
+              name="password"
+              value={password}
+              type="password"
+              placeholder="Password"
+              onChange={this.handleChange}
+            />
+            <label htmlFor="passwordConfirmation">Confirm Password</label>
+            <input
+              required
+              name="passwordConfirmation"
+              value={passwordConfirmation}
+              type="password"
+              placeholder="Confirm Password"
+              onChange={this.handleChange}
+            />
+            <div className="button-container">
+              <button className="ui-button" type="submit">Sign Up</button>
+              <button className="mm-ui-button"><Link to="/">Main Menu</Link></button>
+            </div>
+          </form>
+        </div>
+      </React.Fragment>
     )
   }
 }
