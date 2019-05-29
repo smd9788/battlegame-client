@@ -56,19 +56,44 @@ class CreateCharacter extends Component {
       return <Redirect to={`/characters/${createdCharacterId}`} />
     }
 
+    if (charClass === 'Paladin') {
+      return <img src={require('./classPlates/Paladin.svg')} alt="" className="class-plate"></img>
+    }
+
+    if (charClass === 'Priest') {
+      return <img src={require('./classPlates/Priest.svg')} alt="" className="class-plate"></img>
+    }
+
+    if (charClass === 'Rogue') {
+      return <img src={require('./classPlates/Rogue.svg')} alt="" className="class-plate"></img>
+    }
+
+    if (charClass === 'Warrior') {
+      return <img src={require('./classPlates/Warrior.svg')} alt="" className="class-plate"></img>
+    }
+
+    if (charClass === 'Wizard') {
+      return <img src={require('./classPlates/Wizard.svg')} alt="" className="class-plate"></img>
+    }
+
     const { handleChange, handleSubmit, handleSelect } = this
     return (
       <div className='game-screens'>
-        { message && <Alert variant="danger">{message}</Alert> }
-        <CharacterForm
-          handleChange={handleChange}
-          handleSubmit={handleSubmit}
-          handleSelect={handleSelect}
-          character={{ nickname, level, charClass }}
-        />
+        <div>
+          { message && <Alert variant="danger">{message}</Alert> }
+          <CharacterForm
+            handleChange={handleChange}
+            handleSubmit={handleSubmit}
+            handleSelect={handleSelect}
+            character={{ nickname, level, charClass }}
+          />
+        </div>
       </div>
     )
   }
 }
 
 export default CreateCharacter
+
+/*  REMOVED CODE
+ */
