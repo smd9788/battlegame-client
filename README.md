@@ -20,15 +20,13 @@ This app is a foundation for a React based browser arcade. The first "game" in t
 ### Current state of app:
 In the current version I aimed to CRUD all user resources and allow users to create heros. Game logic is a W.I.P.
 
-GitHub Repositories:
-[Back end](https://github.com/smd9788/battlegame-api)
-[Front end](https://github.com/smd9788/battlegame-client)
+#### GitHub Repositories:
+- [Back end](https://github.com/smd9788/battlegame-api)
+- [Front end](https://github.com/smd9788/battlegame-client)
 
-Deployed Sites:
-
-Back end: https://reactrcade-api.herokuapp.com/
-
-Front end: https://smd9788.github.io/battlegame-client/
+#### Deployed Sites:
+- [Back end](https://reactrcade-api.herokuapp.com/)
+- [Front end](https://smd9788.github.io/battlegame-client/)
 
 ### Technology used on client:
   - HTML5/CSS3 (gameboard arranged in a css flex-box)
