@@ -12,6 +12,7 @@ If you want to work on this app for yourself follow these steps to begin:
 1. Fork and clone this repository.
 2. Create a new branch for your work and change into it.
 3. Install dependencies with `npm install`
+4. Test changes locally with `npm start`
 
 ## About
 
@@ -21,10 +22,8 @@ This app is a foundation for a React based browser arcade. The first "game" in t
 In the current version I aimed to CRUD all user resources and allow users to create heros. Game logic is a W.I.P.
 
 GitHub Repositories:
-
-Back end: https://github.com/smd9788/battlegame-api
-
-Front end: https://github.com/smd9788/battlegame-client
+[Back end](https://github.com/smd9788/battlegame-api)
+[Front end](https://github.com/smd9788/battlegame-client)
 
 Deployed Sites:
 
@@ -47,8 +46,8 @@ Front end: https://smd9788.github.io/battlegame-client/
 6. As a signed in user, I want to delete the heros I created with a second confirmation so I don't delete by mistake.
 
 ### WireFrames/ERD:
-![wireframe](/public/images/wireframe.jpg)
-![erd](/public/images/erd.jpg)
+<img src="/public/images/wireframe.jpg" width="450" height="450">
+<img src="/public/images/erd.jpg" width="450" height="650">
 
 ### Process:
 1. Create foundation for arcade and a sample game, HeroBuilder. Create and test user CRUD actions
