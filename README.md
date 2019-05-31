@@ -1,4 +1,3 @@
-# reac*rcade
 # HeroBuilder
 
 Test my game out here: [reac*Rcade](https://smd9788.github.io/battlegame-client/#/)
