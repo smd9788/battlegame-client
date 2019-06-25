@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import apiUrl from '../../../apiConfig'
 import axios from 'axios'
 import { withRouter, Redirect } from 'react-router'
 import Alert from 'react-bootstrap/Alert'
+
 import CharacterForm from './CharacterForm'
+import apiUrl from '../apiConfig'
 
 class UpdateCharacter extends Component {
   constructor () {

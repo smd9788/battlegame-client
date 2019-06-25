@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-import '../styles/characters.scss'
+import './characters.scss'
 
-import apiUrl from '../../../apiConfig'
+import apiUrl from '../apiConfig'
 
 class Characters extends Component {
   constructor () {

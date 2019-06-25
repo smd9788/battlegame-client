@@ -1,9 +1,11 @@
+// dependencies
 import React, { Component } from 'react'
 import Alert from 'react-bootstrap/Alert'
-import Header from './header/Header'
-
+// components
+import Header from './components/Header'
+import MainRoutes from './components/MainRoutes'
+// style
 import './App.scss'
-import MainRoutes from './MainRoutes'
 
 class App extends Component {
   constructor () {

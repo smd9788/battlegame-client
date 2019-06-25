@@ -1,9 +1,8 @@
 import React from 'react'
 // import { Link, Route } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-// import SignUp from '../../../auth/components/SignUp'
 
-import '../styles/Home.scss'
+import './Home.scss'
 
 const authenticatedOptions = (
   <React.Fragment>
