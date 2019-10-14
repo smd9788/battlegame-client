@@ -43,7 +43,6 @@ class App extends Component {
                 </Alert.Heading>
               </Alert>
             ))}
-            <div><h6>Icons made by Freepik.com from flaticon.com and is licensed by CC 3.0</h6></div>
           </footer>
         </main>
       </React.Fragment>

@@ -57,26 +57,6 @@ class CreateCharacter extends Component {
       return <Redirect to={`/characters/${createdCharacterId}`} />
     }
 
-    if (charClass === 'Paladin') {
-      return <img src={require('../classPlates/paladin.svg')} alt="" className="class-plate"></img>
-    }
-
-    if (charClass === 'Priest') {
-      return <img src={require('../classPlates/priest.svg')} alt="" className="class-plate"></img>
-    }
-
-    if (charClass === 'Rogue') {
-      return <img src={require('../classPlates/rogue.svg')} alt="" className="class-plate"></img>
-    }
-
-    if (charClass === 'Warrior') {
-      return <img src={require('../classPlates/warrior.svg')} alt="" className="class-plate"></img>
-    }
-
-    if (charClass === 'Wizard') {
-      return <img src={require('../classPlates/wizard.svg')} alt="" className="class-plate"></img>
-    }
-
     const { handleChange, handleSubmit, handleSelect } = this
     return (
       <div className='game-screens'>
@@ -95,6 +75,3 @@ class CreateCharacter extends Component {
 }
 
 export default CreateCharacter
-
-/*  REMOVED CODE
- */
