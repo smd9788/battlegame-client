@@ -2,7 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Dropdown from 'react-bootstrap/Dropdown'
 import DropdownButton from 'react-bootstrap/DropdownButton'
-import '../styles/characters.scss'
+
+import './characters.scss'
 
 const CharacterForm = ({ handleSelect, handleChange, handleSubmit, character }) => (
   <div className="characterform-container">

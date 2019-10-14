@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Redirect, withRouter } from 'react-router'
 import { Link } from 'react-router-dom'
-import apiUrl from '../../../apiConfig'
-import messages from '../../../auth/messages'
+import apiUrl from '../apiConfig'
+import messages from '../auth/messages'
 
 class Character extends Component {
   constructor () {
@@ -11,6 +11,7 @@ class Character extends Component {
 
     this.state = {
       character: null,
+      icon: null,
       shouldRedirect: false,
       redirectMessage: 'Something went wrong'
     }
@@ -49,6 +50,7 @@ class Character extends Component {
   }
   render () {
     const { character, shouldRedirect, redirectMessage } = this.state
+
     if (shouldRedirect) {
       return <Redirect
         to={{
@@ -70,6 +72,7 @@ class Character extends Component {
             <h3>{nickname}</h3>
             <p>Class: {charClass}</p>
             <p>Level {level}</p>
+
             <div className="character-button-container">
               <button className='ui-button' onClick={() => this.deleteCharacter(id)}>Delete</button>
               <button className='ui-button'><Link to={`/characters/${this.props.match.params.id}/update`}>Update</Link></button>
